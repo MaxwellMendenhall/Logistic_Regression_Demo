@@ -4,4 +4,4 @@
 - Could use sklearn.linear_model.LogisticRegression, but I wanted to build this from the ground up so I know how it works and I can expand it in the future. To understand the logistic regression model and how it functions, you need three main algorithms: Cost Function, Gradient Descent, and Gradient. The Cost Function is the heart of the logistic regression model, Gradient Descent is the algorithm used to optimize the Cost Function (find the best w and b values that work best), and Gradient is used within the Gradient Descent to find the derivative of the current iteration.
 - 
 
-$$J(\vec{w},b)\vec{w}_{\text{subscript}}$$
+$$J(\vec{w},b)$$
