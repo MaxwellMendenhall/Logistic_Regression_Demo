@@ -11,7 +11,7 @@ $$
 L(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i}) = 
 \begin{cases}
     -y^i*log(\mathrm{f}\vec{w},b(\vec{x}^{i}) & \text{if } y^i = 1, \\
-    -(1-y^i)log(1-\mathrm{f}(\vec{w},b(\vec{x}^{i})) & \text{if } y^i = 0.
+    -(1-y^i)log(1-\mathrm{f}\vec{w},b(\vec{x}^{i}) & \text{if } y^i = 0.
 \end{cases}
 $$
 ### Gradient Descent: Algorithm used to optimize the cost function and find best value for w and b
