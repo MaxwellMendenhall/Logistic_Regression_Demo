@@ -22,4 +22,6 @@ $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
 - Now that we have the functions to produce the cost function we need to use regluariztion so the cost function does not overfit or underfit the data.
 - Regularization is reducing features sizes so the data does not overfit.
 
-### Regularization Cost Function:
+### Regularization Cost Function: This is just the cost function with one aditional element
+
+$$  $$
