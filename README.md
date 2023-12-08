@@ -9,7 +9,7 @@ $$J(\vec{w},b)=\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i})
 #### Lost function(function inside the cost function): Measue of differnce of a single example to its target value
 $$L(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i})$$
 
-f(x) = 
+### f(x) = 
 \begin{cases} 
     \text{function up here} & \text{condition for the first function}, \\
     \text{function down here} & \text{condition for the second function}.
