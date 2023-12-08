@@ -15,6 +15,7 @@ L(\mathrm{f}(\vec{w},b(\vec{x}^{i}),y^{i})) =
 \end{cases}
 $$
 ### Gradient Descent: Algorithm used to optimize the cost function and find best value for w and b
+$$w_j = w_j - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i})-y^i)x_j^i]$$
+
 $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
 
-$$w_j = w_j - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i})-y^i)x_j^i]$$
