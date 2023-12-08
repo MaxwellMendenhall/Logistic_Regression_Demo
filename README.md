@@ -24,4 +24,4 @@ $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
 
 ### Regularization Cost Function: This is just the cost function with one aditional element
 
-$$  $$
+$$J_{reg}(\vec{w},b)$$
