@@ -7,6 +7,7 @@
 ### Cost Function: Measure of losses over a training set
 $$J(\vec{w},b)=\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i})$$
 #### Lost function(function inside the cost function): Measue of differnce of a single example to its target value 
+
 $$
 L(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i}) = 
 \begin{cases}
@@ -14,6 +15,7 @@ L(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i}) =
     -(1-y^i)log(1-\mathrm{f}\vec{w},b(\vec{x}^{i}) & \text{if } y^i = 0.
 \end{cases}
 $$
+
 ### Gradient Descent: Algorithm used to optimize the cost function and find best value for w and b, where a is learning rate.
 $$w_j = w_j - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i})-y^i)x_j^i]$$
 
@@ -24,6 +26,11 @@ $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
 
 ### Regularization Cost Function: This is just the cost function with one additional element
 
-$$J_{reg}(\vec{w},b) = J(\vec{w},b) + \frac{\lambda}{2m}\sum_{i=1}^{m}w_j^2$$
+$$
+J_{reg}(\vec{w},b) = J(\vec{w},b) + \frac{\lambda}{2m}\sum_{i=1}^{m}w_j^2 = 
+\begin{cases}
+
+\end{cases}
+$$
 
 ### Regularization Gradient Descent: This is just the gradient descent algorithm with one additional element
