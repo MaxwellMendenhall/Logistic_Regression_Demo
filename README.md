@@ -22,6 +22,8 @@ $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
 - Now that we have the functions to produce the cost function we need to use regluariztion so the cost function does not overfit or underfit the data.
 - Regularization is reducing features sizes so the data does not overfit.
 
-### Regularization Cost Function: This is just the cost function with one aditional element
+### Regularization Cost Function: This is just the cost function with one additional element
 
 $$J_{reg}(\vec{w},b) = J(\vec{w},b) + \frac{\lambda}{2m}\sum_{i=1}^{m}w_j^2$$
+
+### Regularization Gradient Descent: This is just the gradient descent algorithm with one additional element
