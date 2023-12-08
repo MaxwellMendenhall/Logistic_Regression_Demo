@@ -5,6 +5,6 @@
 - 
 
 ### Cost Function: 
-$$J(\vec{w},b)=\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i}))$$
+$$J(\vec{w},b)=\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i})$$
 #### Lost function(function inside the cost function):
 $$\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i})$$
