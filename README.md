@@ -5,12 +5,12 @@
 -  
 
 ### Cost Function: Measure of losses over a training set
-$$J(\vec{w},b)=\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}(\vec{w},b(\vec{x}^{i}),y^{i}))$$
+$$J(\vec{w},b)=\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i})$$
 #### Lost function(function inside the cost function): Measue of differnce of a single example to its target value 
 $$
-L(\mathrm{f}(\vec{w},b(\vec{x}^{i}),y^{i})) = 
+L(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i}) = 
 \begin{cases}
-    -y^i*log(\mathrm{f}(\vec{w},b(\vec{x}^{i})) & \text{if } y^i = 1, \\
+    -y^i*log(\mathrm{f}\vec{w},b(\vec{x}^{i}) & \text{if } y^i = 1, \\
     -(1-y^i)log(1-\mathrm{f}(\vec{w},b(\vec{x}^{i})) & \text{if } y^i = 0.
 \end{cases}
 $$
