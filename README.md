@@ -29,7 +29,8 @@ $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
 $$
 J_{reg}(\vec{w},b) = J(\vec{w},b) + \frac{\lambda}{2m}\sum_{i=1}^{m}w_j^2 = 
 \begin{cases}
-
+    \text{if } \lambda=0 & overfit, \\
+    \text{if } \lambda=\lim_{x \to \infty} & underfit
 \end{cases}
 $$
 
