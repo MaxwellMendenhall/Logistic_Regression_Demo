@@ -10,7 +10,7 @@ $$J(\vec{w},b)=\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i})
 $$L(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i})$$
 
 ### f(x) = 
-\begin{cases} 
+$$\begin{cases} 
     \text{function up here} & \text{condition for the first function}, \\
     \text{function down here} & \text{condition for the second function}.
-\end{cases}
+\end{cases}$$
