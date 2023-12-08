@@ -10,7 +10,7 @@ $$J(\vec{w},b)=\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i})
 $$
 L(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i}) = 
 \begin{cases}
-    -y^i*log(\mathrm{f}\vec{w},b(\vec{x}^{i})  \text{if y^i = 1}, \\
+    -y^i*log(\mathrm{f}\vec{w},b(\vec{x}^{i})  \text{if } y^i = 1, \\
     \text{function down here} & \text{condition for the second function}.
 \end{cases}
 $$
