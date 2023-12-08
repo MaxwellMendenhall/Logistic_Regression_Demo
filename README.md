@@ -35,3 +35,5 @@ J_{reg}(\vec{w},b) = J(\vec{w},b) + \frac{\lambda}{2m}\sum_{i=1}^{m}w_j^2 =
 $$
 
 ### Regularization Gradient Descent: This is just the gradient descent algorithm with one additional element
+
+$$$$
