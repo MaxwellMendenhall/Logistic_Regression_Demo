@@ -11,6 +11,6 @@ $$
 L(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i}) = 
 \begin{cases}
     -y^i*log(\mathrm{f}\vec{w},b(\vec{x}^{i}) & \text{if } y^i = 1, \\
-    \text{function down here} & \text{condition for the second function}.
+    -(1-y^i)log(1-\mathrm{f}\vec{w},b(\vec{x}^{i}) & \text{condition for the second function}.
 \end{cases}
 $$
