@@ -30,7 +30,7 @@ $$
 J_{reg}(\vec{w},b) = J(\vec{w},b) + \frac{\lambda}{2m}\sum_{i=1}^{m}w_j^2 = 
 \begin{cases}
     \text{if } \lambda=0 & \text{overfit}, \\
-    \text{if } \lambda=x \to \infty & \text{underfit}
+    \text{if } \lambda=\lambda \to \infty & \text{underfit}
 \end{cases}
 $$
 
