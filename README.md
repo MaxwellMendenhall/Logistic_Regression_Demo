@@ -39,3 +39,5 @@ $$
 $$w_j = w_j - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i})-y^i)x_j^i] + \frac{\lambda}{m}w_j$$
 
 $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
+
+# Getting Slope
