@@ -44,4 +44,5 @@ $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
 - The data that will be fed into this machine learning model will be angles can getting the probability they win or do not win.
 - In order to get angles of a line you need to find the slope of point of interest. To get slope you need t-1 and t+1 where t is the value of intersection. Then you would need to plug the two points into the slope formula to get it:
 $$m = \frac{y_{2} - y_{1}}{x_{2} - x_{1}}$$
-- 
+- After finding slope to get angle of intersection you can use this formula:
+$$\theta = arctan(|\frac{m_{1} - m_{2}}{1 + m_{1}m_{2}}|)$$
