@@ -46,3 +46,5 @@ $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
 $$m = \frac{y_{2} - y_{1}}{x_{2} - x_{1}}$$
 - After finding slope to get angle of intersection you can use this formula:
 $$\theta = arctan(|\frac{m_{1} - m_{2}}{1 + m_{1}m_{2}}|)$$
+
+$$\theta \text{ in degrees} = \theta * \frac{180}{\pi}$$
