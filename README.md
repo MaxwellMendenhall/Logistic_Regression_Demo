@@ -57,3 +57,6 @@ Once the slope is obtained, the angle of intersection is calculated using:
 $$\theta = arctan(|\frac{m_{1} - m_{2}}{1 + m_{1}m_{2}}|)$$
 
 $$\theta \text{ in degrees} = \theta * \frac{180}{\pi}$$
+
+## Results
+The angle data for entries does not seem to have any correlation to the win and lose rate. Since this is only a one feature model, I expected little to no correlation to the data. Next steps would be to identify other related features and test them. 
