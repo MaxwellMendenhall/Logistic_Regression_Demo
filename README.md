@@ -1,10 +1,16 @@
-# Trading Algorithm Machine Learning
+# Trading Algorithm using Machine Learning
+## Introduction
+This project aims to optimize a trading algorithm leveraging machine learning techniques. The primary goal is to automate the process and enhance performance without the need for constant manual intervention. The initial model employed is based on logistic regression.
+## Implementation Details
 
-- Needed to optimize the trading algorithm without spending too much time on number crunching and when I am not at the computer. Machine learning can do this easily; a few models can help, but the first iteration of this model would be a logistic regression model.
-- Could use [sklearn.linear_model.LogisticRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html), but I wanted to build this from the ground up so I know how it works and I can expand it in the future. To understand the logistic regression model and how it functions, you need two main algorithms/functions: Cost Function and Gradient Descent. A simple explaination of these algorithms/functions -> Cost Function is the heart of the logistic regression model, Gradient Descent is the algorithm used to optimize the Cost Function (find the best w and b values that work best), and derivatives are used in gradient descent.
+### Logistic Regression Model
+nstead of using pre-built libraries like sklearn.linear_model.LogisticRegression, this project involves building the logistic regression model from scratch. This approach aids in understanding the fundamental mechanisms and allows for future expansions. The model is built around two key components:
+- Cost Function: The core of the logistic regression model.
+- Gradient Descent: An optimization algorithm used to refine the Cost Function.
 
-### Cost Function: Measure of losses over a training set
+#### Cost Function: Measure of losses over a training set
 $$J(\vec{w},b)=\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i})$$
+
 #### Lost function(function inside the cost function): Measue of differnce of a single example to its target value 
 
 $$
@@ -15,15 +21,14 @@ L(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i}) =
 \end{cases}
 $$
 
-### Gradient Descent: Algorithm used to optimize the cost function and find best value for w and b, where a is learning rate.
+#### Gradient Descent: Algorithm used to optimize the cost function and find best value for w and b, where a is learning rate.
 $$w_j = w_j - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i})-y^i)x_j^i]$$
 
 $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
 
-- Now that we have the functions to produce the cost function we need to use regluariztion so the cost function does not overfit or underfit the data.
-- Regularization is reducing features sizes so the data does not overfit.
-
-### Regularization Cost Function: This is just the cost function with one additional element
+### Regularization
+To prevent overfitting or underfitting, regularization is applied. It involves reducing feature sizes.
+#### Regularization Cost Function: This is just the cost function with one additional element
 
 $$
 J_{reg}(\vec{w},b) = J(\vec{w},b) + \frac{\lambda}{2m}\sum_{i=1}^{m}w_j^2 = 
@@ -33,18 +38,22 @@ J_{reg}(\vec{w},b) = J(\vec{w},b) + \frac{\lambda}{2m}\sum_{i=1}^{m}w_j^2 =
 \end{cases}
 $$
 
-### Regularization Gradient Descent: This is just the gradient descent algorithm with one additional element
+#### Regularization Gradient Descent: This is just the gradient descent algorithm with one additional element
 - Formula for w changes while the formula for b stays the same.
 
 $$w_j = w_j - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i})-y^i)x_j^i] + \frac{\lambda}{m}w_j$$
 
 $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
 
-# Getting Angle Data
-- The data that will be fed into this machine learning model will be angles can getting the probability they win or do not win.
-- In order to get angles of a line you need to find the slope of point of interest. To get slope you need t-1 and t+1 where t is the value of intersection. Then you would need to plug the two points into the slope formula to get it:
+## Angle Data for the Model
+The model uses angles as input data to predict probabilities.
+
+### Calculating Slope
+To determine the slope at a point of interest:
 $$m = \frac{y_{2} - y_{1}}{x_{2} - x_{1}}$$
-- After finding slope to get angle of intersection you can use this formula:
+
+### Calculating Angle of Intersection
+Once the slope is obtained, the angle of intersection is calculated using:
 $$\theta = arctan(|\frac{m_{1} - m_{2}}{1 + m_{1}m_{2}}|)$$
 
 $$\theta \text{ in degrees} = \theta * \frac{180}{\pi}$$
