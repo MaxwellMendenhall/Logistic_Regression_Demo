@@ -58,5 +58,28 @@ $$\theta = arctan(|\frac{m_{1} - m_{2}}{1 + m_{1}m_{2}}|)$$
 
 $$\theta \text{ in degrees} = \theta * \frac{180}{\pi}$$
 
-## Results
-The angle data for entries does not seem to have any correlation to the win and lose rate. Since this is only a one feature model, I expected little to no correlation to the data. Next steps would be to identify other related features and test them. 
+## Results and Analysis
+
+### Analysis of Angle Data
+Upon thorough analysis of the angle data within our dataset, it is observed that there is a negligible correlation between the angle values and the win/loss rate. This finding aligns with initial expectations, given the model's reliance on a single feature, which typically offers limited predictive power.
+
+### Interpretation
+The lack of significant correlation in this context is not surprising. Single-feature models often struggle to capture the complexities inherent in datasets where outcomes (like win/loss rates) are influenced by multiple factors. Therefore, the current analysis reinforces the hypothesis that a more robust model, integrating additional relevant features, is necessary for more accurate predictions.
+
+### Future Directions
+#### Expanding the Feature Set
+
+The next phase of our research will focus on identifying and incorporating additional features that are potentially correlated with the win/loss outcomes. This includes but is not limited to:
+
+- [Feature 1]: A brief description of how this feature could influence the outcomes.
+- [Feature 2]: Explanation of its relevance.
+- [Additional Features]: Any other features that will be considered.
+#### Model Enhancement
+
+Further, we plan to refine our predictive model by:
+
+- Integrating these new features and analyzing their collective impact.
+- Exploring more complex modeling techniques that can capture the multi-dimensional nature of the data.
+
+### Conclusion
+This initial phase of analysis sets the groundwork for a more comprehensive study. By expanding our feature set and employing advanced modeling strategies, we aim to significantly improve the accuracy of our predictions and gain deeper insights into the factors influencing win/loss rates.
