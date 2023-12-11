@@ -63,19 +63,28 @@ def get_slope(data, point, y):
 
 
 if __name__ == "__main__":
-    df1 = pd.read_csv('alldata.csv')
-    df2 = pd.read_csv('data.csv')
-    df1['Time'] = pd.to_datetime(df1['Time'].str.strip('{}'), format='%m/%d/%Y %I:%M:%S %p')
-    df2['Time'] = pd.to_datetime(df2['Time'].str.strip('{}'), format='%m/%d/%Y %I:%M:%S %p')
-    matching_rows = df1[df1['Time'].isin(df2['Time'])]
+    """
+    Parse data and get angles
+
+        YOUR CSV FILE HERE 1: Your file that contains all the data
+        YOUR CSV FILE HERE 2: Your file that contains the winning data
+        YOUR COLOUMN HERE 1: Coloumn that represents all data (Ex. Time)
+        YOUR COLOUMN HERE 2: First feature to get angle
+        YOUR COLOUMN HERE 3: Second feature to get angle
+    """
+    df1 = pd.read_csv('YOUR CSV FILE HERE 1')
+    df2 = pd.read_csv('YOUR CSV FILE HERE 2')
+    df1['YOUR COLOUMN HERE 1'] = pd.to_datetime(df1['YOUR COLOUMN HERE 1'].str.strip('{}'), format='%m/%d/%Y %I:%M:%S %p')
+    df2['YOUR COLOUMN HERE 1'] = pd.to_datetime(df2['YOUR COLOUMN HERE 1'].str.strip('{}'), format='%m/%d/%Y %I:%M:%S %p')
+    matching_rows = df1[df1['YOUR COLOUMN HERE 1'].isin(df2['YOUR COLOUMN HERE 1'])]
     df = df1.replace(to_replace=r'\{|\}', value='', regex=True)
-    df['SMA12'] = df['SMA12'].astype(float)
-    df['SMA31'] = df['SMA31'].astype(float)
+    df['YOUR COLOUMN HERE 2'] = df['YOUR COLOUMN HERE 2'].astype(float)
+    df['YOUR COLOUMN HERE 3'] = df['YOUR COLOUMN HERE 3'].astype(float)
     my_dict = {}
     for index, row in matching_rows.iterrows():
-        matching_row = df2[df2['Time'] == row['Time']]
-        m1 = get_slope(df, index, 'SMA12')
-        m2 = get_slope(df, index, 'SMA31')
+        matching_row = df2[df2['YOUR COLOUMN HERE 1'] == row['YOUR COLOUMN HERE 1']]
+        m1 = get_slope(df, index, 'YOUR COLOUMN HERE 2')
+        m2 = get_slope(df, index, 'YOUR COLOUMN HERE 3')
         tan_theta_second = (m1 - m2) / (1 + m1 * m2)
         tan_theta_second = abs(tan_theta_second)
         angle_radians_second = math.atan(tan_theta_second)
@@ -83,6 +92,9 @@ if __name__ == "__main__":
         my_dict[angle_degrees_second] = float(matching_row['Win'].str.strip('{}').item())
     """
     Model Training
+
+        alph: This is learning rate change this to fit data better
+        iters: Number of times gradient descent will run
     """
     X_train = np.array(list(my_dict.keys()))
     y_train = np.array(list(my_dict.values()))
@@ -90,7 +102,7 @@ if __name__ == "__main__":
 
     w_tmp = np.zeros(X_train_reshaped.shape[1])
     b_tmp = 0.
-    alph = 0.001
+    alph = 0.001 
     iters = 10000
     w_out, b_out, _ = gradient_descent(X_train_reshaped, y_train, w_tmp, b_tmp, alph, iters)
     print(f"\nUpdated parameters: w: {w_out}, b: {b_out}")
