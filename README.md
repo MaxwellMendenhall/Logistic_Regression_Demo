@@ -4,7 +4,7 @@ This project aims to optimize a trading algorithm leveraging machine learning te
 ## Implementation Details
 
 ### Logistic Regression Model
-nstead of using pre-built libraries like sklearn.linear_model.LogisticRegression, this project involves building the logistic regression model from scratch. This approach aids in understanding the fundamental mechanisms and allows for future expansions. The model is built around two key components:
+Instead of using pre-built libraries like sklearn.linear_model.LogisticRegression, this project involves building the logistic regression model from scratch. This approach aids in understanding the fundamental mechanisms and allows for future expansions. The model is built around two key components:
 - Cost Function: The core of the logistic regression model.
 - Gradient Descent: An optimization algorithm used to refine the Cost Function.
 
