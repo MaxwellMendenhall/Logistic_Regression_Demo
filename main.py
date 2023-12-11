@@ -63,23 +63,38 @@ def get_slope(data, point, y):
 
 
 if __name__ == "__main__":
+    df1 = pd.read_csv('alldata.csv')
+    df2 = pd.read_csv('data.csv')
+    df1['Time'] = pd.to_datetime(df1['Time'].str.strip('{}'), format='%m/%d/%Y %I:%M:%S %p')
+    df2['Time'] = pd.to_datetime(df2['Time'].str.strip('{}'), format='%m/%d/%Y %I:%M:%S %p')
+    matching_rows = df1[df1['Time'].isin(df2['Time'])]
+    df = df1.replace(to_replace=r'\{|\}', value='', regex=True)
+    df['SMA12'] = df['SMA12'].astype(float)
+    df['SMA31'] = df['SMA31'].astype(float)
+    my_dict = {}
+    for index, row in matching_rows.iterrows():
+        matching_row = df2[df2['Time'] == row['Time']]
+        m1 = get_slope(df, index, 'SMA12')
+        m2 = get_slope(df, index, 'SMA31')
+        tan_theta_second = (m1 - m2) / (1 + m1 * m2)
+        tan_theta_second = abs(tan_theta_second)
+        angle_radians_second = math.atan(tan_theta_second)
+        angle_degrees_second = math.degrees(angle_radians_second)
+        my_dict[angle_degrees_second] = float(matching_row['Win'].str.strip('{}').item())
     """
-    Sample data for logistic regression
+    Model Training
     """
-    np.random.seed(0)
-    X_train_single = np.random.rand(100, 1) * 10 
-    y_train_single = np.random.randint(0, 2, size=X_train_single.shape[0])
+    X_train = np.array(list(my_dict.keys()))
+    y_train = np.array(list(my_dict.values()))
+    X_train_reshaped = X_train.reshape(-1, 1)
 
-    w_tmp = np.zeros(X_train_single.shape[1])
+    w_tmp = np.zeros(X_train_reshaped.shape[1])
     b_tmp = 0.
-    alph = 0.01
+    alph = 0.001
     iters = 10000
-
-    w_out, b_out, _ = gradient_descent(X_train_single, y_train_single, w_tmp, b_tmp, alph, iters)
-
+    w_out, b_out, _ = gradient_descent(X_train_reshaped, y_train, w_tmp, b_tmp, alph, iters)
     print(f"\nUpdated parameters: w: {w_out}, b: {b_out}")
-
-    plt.scatter(X_train_single, y_train_single, color='red', label='Data Points')
+    plt.scatter(X_train_reshaped, y_train, color='red', label='Data Points')
     x_values = np.linspace(0, 10, 300)
     y_values = 1 / (1 + np.exp(-(w_out * x_values + b_out)))  # Sigmoid function
     plt.plot(x_values, y_values, color='blue', label='Logistic Regression')
@@ -89,20 +104,3 @@ if __name__ == "__main__":
     plt.title('Single Feature Logistic Regression')
     plt.show()
 
-    """
-    Sample data for finding angles
-    """
-    np.random.seed(0)
-    data = np.random.randn(100).cumsum() + 100
-    df_with_smas = pd.DataFrame(data, columns=['Price'])
-    df_with_smas['SMA_10'] = df_with_smas['Price'].rolling(window=10).mean()
-    df_with_smas['SMA_20'] = df_with_smas['Price'].rolling(window=20).mean()
-
-    m1 = get_slope(df_with_smas, 29, 'SMA_10')
-    m2 = get_slope(df_with_smas, 29, 'SMA_20')
-
-    tan_theta_second = abs(m1 - m2) / (1 + m1 * m2)
-    angle_radians_second = math.atan(tan_theta_second)
-    angle_degrees_second = math.degrees(angle_radians_second)
-
-    print(angle_degrees_second)
