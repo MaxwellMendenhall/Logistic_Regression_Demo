@@ -73,7 +73,7 @@ The lack of significant correlation in this context is not surprising. Single-fe
 ### Future Directions
 #### Expanding the Feature Set
 
-The next phase of our research will focus on identifying and incorporating additional features that are potentially correlated with the win/loss outcomes. This includes but is not limited to:
+The next phase of my research will focus on identifying and incorporating additional features that are potentially correlated with the win/loss outcomes. This includes but is not limited to:
 
 - **Rate of increase**:This feature measures the rate at which a certain variable (e.g., price, volume, etc.) increases over a specified time frame. In the context of win/loss outcomes, this rate could provide insights into momentum trends, potentially indicating periods of heightened activity or interest. For instance, a rapid rate of increase might correlate with higher win rates due to market enthusiasm, while a slower rate could suggest caution or uncertainty among participants.
 - **Time Passed Since Last Trade (or Number of Bars Since Last Trade)**: This feature captures the duration since the last trading activity, which can be a critical indicator of market sentiment and trader behavior. In terms of its relevance, this duration might reflect the market’s response time or the latency in reaction to external events. Shorter intervals could imply a more active and responsive market, potentially leading to higher win rates, while longer intervals might indicate a less dynamic market environment, possibly correlating with lower win rates.
