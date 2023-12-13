@@ -85,4 +85,4 @@ Further, we plan to refine our predictive model by:
 - Exploring more complex modeling techniques that can capture the multi-dimensional nature of the data.
 
 ### Conclusion
-This initial phase of analysis sets the groundwork for a more comprehensive study. By expanding our feature set and employing advanced modeling strategies, we aim to significantly improve the accuracy of our predictions and gain deeper insights into the factors influencing win/loss rates.
+This initial phase of analysis sets the groundwork for a more comprehensive study. By expanding our feature set and employing advanced modeling strategies, I aim to significantly improve the accuracy of our predictions and gain deeper insights into the factors influencing win/loss rates.
