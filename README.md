@@ -66,7 +66,9 @@ Upon thorough analysis of the angle data within our dataset, it is observed that
 ### Interpretation
 The lack of significant correlation in this context is not surprising. Single-feature models often struggle to capture the complexities inherent in datasets where outcomes (like win/loss rates) are influenced by multiple factors. Therefore, the current analysis reinforces the hypothesis that a more robust model, integrating additional relevant features, is necessary for more accurate predictions.
 
-<img src="images/data.png" alt="My Image" width="500" align="center"/>
+<div align="center">
+    <img src="images/data.png" alt="My Image" width="500"/>
+</div>
 <img src="images/slgrplot.png" alt="My Image" width="500" align="center"/>
 <img src="images/con.png" alt="My Image" width="500" align="center"/>
 
