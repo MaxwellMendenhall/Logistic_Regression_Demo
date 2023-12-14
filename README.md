@@ -8,10 +8,12 @@ Instead of using pre-built libraries like sklearn.linear_model.LogisticRegressio
 - Cost Function: The core of the logistic regression model.
 - Gradient Descent: An optimization algorithm used to refine the Cost Function.
 
-#### Cost Function: Measure of losses over a training set
+#### Cost Function:
+Measure of losses over a training set.
 $$J(\vec{w},b)=\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i})$$
 
-#### Lost function(function inside the cost function): Measue of differnce of a single example to its target value 
+#### Lost function(function inside the cost function):
+Measure of difference of a single example to its target value.
 
 $$
 L(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i}) = 
@@ -21,7 +23,8 @@ L(\mathrm{f}\vec{w},b(\vec{x}^{i}),y^{i}) =
 \end{cases}
 $$
 
-#### Gradient Descent: Algorithm used to optimize the cost function and find best value for w and b, where a is learning rate.
+#### Gradient Descent:
+The algorithm is used to optimize the cost function and find the best value for w and b, where a is the learning rate.
 $$w_j = w_j - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i})-y^i)x_j^i]$$
 
 $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
