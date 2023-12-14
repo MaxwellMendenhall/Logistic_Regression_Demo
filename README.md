@@ -68,6 +68,7 @@ The lack of significant correlation in this context is not surprising. Single-fe
 
 <div align="center">
     <img src="images/data.png" alt="My Image" width="500"/>
+    <br>
     <em>image_caption</em>
 </div>
 <div align="center">
