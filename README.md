@@ -69,8 +69,12 @@ The lack of significant correlation in this context is not surprising. Single-fe
 <div align="center">
     <img src="images/data.png" alt="My Image" width="500"/>
 </div>
-<img src="images/slgrplot.png" alt="My Image" width="500" align="center"/>
-<img src="images/con.png" alt="My Image" width="500" align="center"/>
+<div align="center">
+    <img src="images/slgrplot.png" alt="My Image" width="500" align="center"/>
+</div>
+<div align="center">
+    <img src="images/con.png" alt="My Image" width="500" align="center"/>
+</div>
 
 ### Future Directions
 #### Expanding the Feature Set
