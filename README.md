@@ -93,7 +93,7 @@ The next phase of my research will focus on identifying and incorporating additi
 - **Time Passed Since Last Trade (or Number of Bars Since Last Trade)**: This feature captures the duration since the last trading activity, which can be a critical indicator of market sentiment and trader behavior. In terms of its relevance, this duration might reflect the market’s response time or the latency in reaction to external events. Shorter intervals could imply a more active and responsive market, potentially leading to higher win rates, while longer intervals might indicate a less dynamic market environment, possibly correlating with lower win rates.
 #### Model Enhancement
 
-Further, we plan to refine our predictive model by:
+Further, I plan to refine our predictive model by:
 
 - Integrating these new features and analyzing their collective impact.
 - Exploring more complex modeling techniques that can capture the multi-dimensional nature of the data.
