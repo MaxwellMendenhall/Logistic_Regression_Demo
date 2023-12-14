@@ -73,7 +73,7 @@ The lack of significant correlation in this context is not surprising. Single-fe
 </div>
 <br>
 <div align="center">
-    <img src="images/slgrplot.png" alt="My Image" width="500" align="center"/>
+    <img src="images/plot.png" alt="My Image" width="500" align="center"/>
     <br>
     <em>Sigmoid function being plotted which shows no correlation between angles and wins/losses, 0's are losses 1's are wins</em>
 </div>
