@@ -69,19 +69,19 @@ The lack of significant correlation in this context is not surprising. Single-fe
 <div align="center">
     <img src="images/data.png" alt="My Image" width="500"/>
     <br>
-    <em>image_caption</em>
+    <em>Gradient Descent in action</em>
 </div>
 <br>
 <div align="center">
     <img src="images/slgrplot.png" alt="My Image" width="500" align="center"/>
     <br>
-    <em>image_caption</em>
+    <em>Sigmoid function being plotted</em>
 </div>
 <br>
 <div align="center">
     <img src="images/con.png" alt="My Image" width="500" align="center"/>
     <br>
-    <em>image_caption</em>
+    <em>Cost Function optimization</em>
 </div>
 
 ### Future Directions
