@@ -31,7 +31,8 @@ $$b = b - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^i)-y^i)]$$
 
 ### Regularization
 To prevent overfitting or underfitting, regularization is applied. It involves reducing feature sizes.
-#### Regularization Cost Function: This is just the cost function with one additional element
+#### Regularization Cost Function:
+This is just the cost function with one additional element.
 
 $$
 J_{reg}(\vec{w},b) = J(\vec{w},b) + \frac{\lambda}{2m}\sum_{i=1}^{m}w_j^2 = 
@@ -41,7 +42,8 @@ J_{reg}(\vec{w},b) = J(\vec{w},b) + \frac{\lambda}{2m}\sum_{i=1}^{m}w_j^2 =
 \end{cases}
 $$
 
-#### Regularization Gradient Descent: This is just the gradient descent algorithm with one additional element
+#### Regularization Gradient Descent:
+ This is just the gradient descent algorithm with one additional element.
 - Formula for w changes while the formula for b stays the same.
 
 $$w_j = w_j - a[\frac{1}{m}\sum_{i=1}^{m}(\mathrm{f}\vec{w},b(\vec{x}^{i})-y^i)x_j^i] + \frac{\lambda}{m}w_j$$
