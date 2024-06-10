@@ -1,4 +1,5 @@
-# Trading Algorithm using Machine Learning
+# Logistc Regression Demo
+
 ## Introduction
 This project aims to optimize a trading algorithm leveraging machine learning techniques. The primary goal is to automate the process and enhance performance without the need for constant manual intervention. The initial model employed is based on logistic regression.
 ## Implementation Details
